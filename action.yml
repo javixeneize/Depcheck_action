@@ -18,4 +18,4 @@ runs:
         - '--format' 
         - '${{ inputs.format }}'
         - '--out'
-        -  '/src'
+        -  './src'
