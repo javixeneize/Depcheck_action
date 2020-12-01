@@ -1,5 +1,7 @@
 FROM owasp/dependency-check
 USER root
-RUN chown dependencycheck /src
+RUN mkdir /reports
+RUN chown dependencycheck /reports
 USER dependencycheck
-ENTRYPOINT ["/usr/share/dependency-check/bin/dependency-check.sh"]
+COPY entrypoint.sh /src/entrypoint.sh
+ENTRYPOINT ["/src/entrypoint.sh"]
