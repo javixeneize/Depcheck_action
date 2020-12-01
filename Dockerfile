@@ -5,4 +5,5 @@ RUN chmod 777 /reports
 RUN chmod 777 /src
 USER dependencycheck
 COPY entrypoint.sh /src/entrypoint.sh
+RUN chmod 777 /src/entrypoint.sh
 ENTRYPOINT ["/src/entrypoint.sh"]
