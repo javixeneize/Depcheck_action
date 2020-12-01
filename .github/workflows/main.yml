@@ -17,9 +17,9 @@ jobs:
           path: '.'
           format: 'HTML'
       - name: checkdir
-        run: ls -la src       
+        run: ls -la       
       - name: Upload Test results
         uses: actions/upload-artifact@master
         with:
            name: Depcheck report
-           path: ${{github.workspace}}/src
+           path: ${{github.workspace}}/reports
